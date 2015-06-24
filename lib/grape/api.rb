@@ -151,7 +151,7 @@ module Grape
                 self.class.options(path, {}) do
                   header 'Allow', allow_header
                   status 204
-                  ''
+                  {}
                 end
               end
             end
@@ -161,7 +161,7 @@ module Grape
             self.class.route(not_allowed_methods, path) do
               header 'Allow', allow_header
               status 405
-              ''
+              {}
             end
           end
         end
